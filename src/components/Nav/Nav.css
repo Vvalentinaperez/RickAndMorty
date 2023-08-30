@@ -1,0 +1,55 @@
+
+.navBar{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navBar button{
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navBar button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navBar button a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-logo{
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.logo-search-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
