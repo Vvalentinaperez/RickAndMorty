@@ -1,0 +1,47 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+    height: auto;  /* Añadir para que tenga la altura de una fila */
+    overflow: hidden;  /* Oculta cualquier cosa que exceda su altura */
+    padding-inline: 2rem;
+    gap: 1.5rem;
+}
+
+
+
+.filtersContainer select {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    color: white;
+    padding: 8px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    appearance: none;  /* Para quitar el estilo predeterminado en algunos navegadores */
+    outline: none;  /* Para quitar el contorno al enfocar */
+    text-align: center;
+}
+
+.filtersContainer option {
+    background: transparent;
+    border: none; /* Remueve el borde predeterminado en algunas opciones */
+    color: black;
+    padding: 8px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.filtersContainer select:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.filtersContainer {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-top: 15px;
+    transform: translateX(-50%); /* Esto centrará el contenedor en el centro exacto */
+    z-index: 2000; /* Asegúrate de que sea mayor que cualquier otro z-index que tengas para que siempre esté en la parte superior */
+}

@@ -1,0 +1,77 @@
+.detalleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    padding: 5px 20px;
+    height: 65vh; 
+    flex-direction: row; 
+}
+
+
+.detalleText {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.detalleText h2.name{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: green;
+    text-transform: uppercase;
+    font-size: 2rem;
+    justify-content: flex-start;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to bottom, rgb(199, 236, 64), rgb(17, 233, 114)); /* Cambia los colores según tu diseño */
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+.detalleImagen{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalleImagen img {
+    border-radius: 15px;
+    transition: all 0.3s;
+    width: 230px;
+    height: 300px;
+}
+
+.detalleContainer {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+/* Después de la animación (final) */
+.detalleContainer.active {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.logoDetalle{
+    position: fixed; /* Hace que el logo tenga una posición fija en la ventana del navegador */
+    width: 50px; /* o el tamaño que desees */
+    height: auto; /* mantiene las proporciones del logo */
+    bottom: 300px; /* coloca el logo en la parte inferior */
+    left: 20px;   
+}
+
+

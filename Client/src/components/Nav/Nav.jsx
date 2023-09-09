@@ -1,0 +1,31 @@
+import SearchBar from "../SearchBar"
+import {Link} from "react-router-dom"
+import './Nav.css'
+import logo from '../imagenes/logo2.png'
+
+
+const Nav = function({onSearch}){
+    return(
+    
+         <div className="navBar">
+            <div className="logo-search-container">
+            <img src={logo} alt="Logo" className="nav-logo" />
+             <SearchBar onSearch={onSearch}/>
+            </div>
+             <div>
+             <button className="about">
+                <Link to="/about">About</Link>
+             </button>
+             <button className="home">
+                <Link to="/home">Home</Link>
+             </button>
+             <button className="favorites">
+               <Link to="/Favorites">Favorites</Link>
+             </button>
+             </div>
+        </div>
+   
+    )
+}
+
+export default Nav;

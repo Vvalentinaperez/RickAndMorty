@@ -1,0 +1,15 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+    height: auto;  /* Añadir para que tenga la altura de una fila */
+    overflow: hidden;  /* Oculta cualquier cosa que exceda su altura */
+    padding-inline: 2rem;
+    gap: 1.5rem;
+}
+
+
+
+
+
+
