@@ -6,11 +6,11 @@ const validateForm = (req, res) => {
     const userValidate = users.some((user) => user.email === email && user.password === password)
     
     return (userValidate 
-    ? res.state(200).send({"access": true})
-    : res.state(404).send({"access": false}))
+    ? res.status(200).send({"access": true})
+    : res.status(404).send({"access": false}))
 };
 
 
 module.exports = {
     validateForm
-}
+} 

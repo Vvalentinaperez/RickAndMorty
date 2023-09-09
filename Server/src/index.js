@@ -5,7 +5,7 @@ const PORT = 3001;
 
 // server.use(express.json)
 server.use(express.json())
-server.use(nodemon('dev'))
+
 
 server.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
