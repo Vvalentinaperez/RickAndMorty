@@ -1,5 +1,5 @@
 import SearchBar from "../SearchBar"
-import {Link, useNavigate} from "react-router-dom"
+import {Link} from "react-router-dom"
 import './Nav.css'
 import logo from '../imagenes/logo2.png'
 

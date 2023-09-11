@@ -6,7 +6,7 @@ export const addFav = (character) => {
 
     return async (dispatch) => { //¿Porque va aca el async? Porque es esta funcion la que hace algo asincronico
       try {
-        const { data } = axios.post(endpoint, character) 
+        const { data } =  await axios.post(endpoint, character) 
 
         if(!data.length) throw Error("No hay favoritos")
 
@@ -25,15 +25,15 @@ export const removeFav = (id) => {
 
     return async (dispatch) => {
       try {
-        await axios.delete(endpoint).then(({ data }) => {
+        const { data } = await axios.delete(endpoint);
 
          if(!data.length) throw Error("No hay favoritos");
 
             return dispatch({
-               type: 'REMOVE_FAV',
+               type: REMOVE_FAV,
                payload: data,
          });
-      });
+
       } catch (error) {
          console.log(error.message);
       }

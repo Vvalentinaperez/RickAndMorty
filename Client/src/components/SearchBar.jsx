@@ -10,7 +10,7 @@ const SearchBar = ({onSearch}) => {
    return (
       <div className="searchbar-container">
          <input type='search' onChange={handleChange} value={id} />
-         <button onClick={() => onSearch(id)}>Add</button>
+         <button onClick={() => { onSearch(id); setId("");}}>Add</button>
       </div>
    );
 }
