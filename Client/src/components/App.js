@@ -24,18 +24,22 @@ function App() {
    let EMAIL = 'ejemplo@gmail.com'
    let PASSWORD = 'unaPassword'
    
-   function login(userData) {
+  const login = async (userData) => {
       const { email, password } = userData;
       const URL = 'http://localhost:3001/rickandmorty/login/';
-      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-         const { access } = data;
-         setAccess(data);
-         access && navigate('/home');
-      });
+      try {
+         await axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+            const { access } = data;
+            setAccess(data);
+            access && navigate('/home');
+         });
+      } catch (error) {
+         alert("No estas habilitado, registrate para saber de nosotros. Familia de Rick And Morty")
+      }
    }
 
 
-   const randomHandler = () => {
+   const randomHandler = () => {  //Funcion para agregar personajes random
       let haveIt = []
 
       let random = (Math.random() * 812).toFixed();
@@ -58,13 +62,16 @@ function App() {
    }
 
    const onSearch = async (id) => {
-     await axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
-         if (data.name) {
-            setCharacters((oldChars) => [...oldChars, data]);
-         } else {
-            window.alert('¡No hay personajes con este ID!');
-         }
-      });
+      try {
+         await axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
+             if (data.name) {
+                setCharacters((oldChars) => [...oldChars, data]);
+             } 
+          });
+      } catch (error) {
+         alert('¡No hay personajes con este ID!')
+      }
+
    }
 
    const onClose = (id) => {  //
