@@ -40,9 +40,8 @@ const Deatil = () => {
       }
 
      return(
+      <>
       <div className="detalleContainer">
-  
-
           <div className="nameContenedor"  style={{ fontSize: fontSize }}>
             <h2 className="name" style={{ fontSize: '40px' }}>{character?.name}</h2>
           </div>
@@ -60,6 +59,8 @@ const Deatil = () => {
           <img src={logo} alt="" className="logoDetalle" />
       </div>
   </div>
+  <div className="creditos" >¿QUERES SABER MÁS DE MI? </div>
+  </>
      )
 }
 

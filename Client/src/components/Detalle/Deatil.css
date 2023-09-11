@@ -106,4 +106,29 @@
     left: 355px;   
 }
 
+.creditos {
+    font-family: 'Creepster', cursive;
+    color: #12b0c9;
+    text-shadow: 
+        -3px -3px 0 black,
+        3px -3px 0 black,
+        -3px 3px 0 black,
+        3px 3px 0 black;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    z-index: 1000;
+    font-weight: 400;
+    animation: fillColorChange 3s infinite alternate;
+}
 
+@keyframes fillColorChange {
+    0% {
+        color: #12b0c9;
+    }
+    100% {
+        color: #bdd45b;
+    }
+}

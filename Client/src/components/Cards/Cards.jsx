@@ -5,6 +5,7 @@ import './Cards.css'
 const Cards = ({characters, onClose}) => { 
 
    return ( 
+      <>
    <div className='card-container'>
       {
          characters.slice(-4).map(({id, name, status, species, gender, origin, image}) => {
@@ -25,6 +26,8 @@ const Cards = ({characters, onClose}) => {
          })
       }
    </div>
+   <div className="creditos" >BIENVENIDOS, ESTE ES TU HOME!!! </div>
+   </>
    );
 }
 

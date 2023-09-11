@@ -77,6 +77,7 @@ function App() {
 
 
    return (
+    <>
       <div className='App'>
          <div className='nav-spacer'>
          {location.pathname !== "/" && <Nav onSearch={onSearch}  random={randomHandler}/> } 
@@ -89,6 +90,7 @@ function App() {
             <Route path="/favorites" element={<Favorites/>} />
          </Routes>
       </div>
+      </>
    );
 }
 

@@ -32,6 +32,7 @@ const Favorites = ({myFavorites}) => {
 
     
     return(
+        <>
         <div>
             <div className="filtersContainer">
             <select onChange={handleOrder}>
@@ -65,6 +66,8 @@ const Favorites = ({myFavorites}) => {
             }
             </div>
         </div>
+        <div className="creditos" >HE AQUI TUS FAVORITOS</div>
+    </>
     )
 }
 
