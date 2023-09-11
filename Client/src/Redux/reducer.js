@@ -15,9 +15,7 @@ const reducer = (state = initialState, {type, payload}) => {
                 ...state, myFavorites: payload
             }
         case FILTER_CARDS:
-            // let prueba = state.allCharacters.filter(character => { console.log(allCharacter.gender);
-                // character.gender == payload})
-        
+          
             console.log(state.myFavorites, state.allCharacters);
             return{
                 ...state,

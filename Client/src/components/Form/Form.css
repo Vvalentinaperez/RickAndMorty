@@ -5,6 +5,30 @@
     box-sizing: border-box;
 }
 
+body:has(.contenedorFormulario) {
+    background-image: url("C:\Users\valen\Downloads\login.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.loginTitulo{
+    font-family: 'Creepster', cursive;
+}
+
+.contenedorFormulario h1 {
+    text-align: center;
+    -webkit-text-stroke: 0.03px #bdd45b; /* Establece el ancho y el color del borde del texto */
+    color: #12b0c9;
+    text-shadow:
+    
+        -3px -3px 0 black,
+        3px -3px 0 black,
+        -3px 3px 0 black,
+        3px 3px 0 black;
+}
+
 
 
 
@@ -19,20 +43,34 @@
 
 
 .creditos {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Creepster', cursive; /* Estilo de fuente */
+    /* -webkit-text-stroke: 0.03px #bdd45b; Borde del texto */
+    color: #12b0c9; /* Color del texto */
+    text-shadow: 
+        -3px -3px 0 black,
+        3px -3px 0 black,
+        -3px 3px 0 black,
+        3px 3px 0 black; /* Sombra del texto */
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translate(-50%);
-    color: white;
     text-align: center;
     z-index: 1000;
     font-weight: 400;
+    animation: fillColorChange 3s infinite alternate;
 }
 
-.creditos:hover {
-    color: red; 
+@keyframes fillColorChange {
+    0% {
+        color: #12b0c9;
+    }
+    100% {
+        color: #bdd45b;
+    }
 }
+
+
 
 
 .contenedorFormulario{
@@ -42,18 +80,15 @@
    align-items: center;
    width: 420px;
    background: transparent;
-   border: 2px solid rgba(255, 255, 255, .2);
+   border: 2px solid rgba(0, 0, 0, 0.2);
    backdrop-filter: blur(20px);
    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-   color: white; 
+   color: black; 
    border-radius: 10px;
    padding: 30px 40px;
 }
 
-.contenedorFormulario h1 {
-    font-size:36px;
-    text-align: center;
-}
+
 
 .contenedorFormulario .input-box{
     position: relative;
@@ -68,15 +103,15 @@
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
+    border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 40px;
     font-size: 20px;
-    color: white;
+    color: black;
     padding: 20px 45px 20px 20px;
 }
 
 .input-box input::placeholder{
-    color: white;
+    color: rgba(0, 0, 0, 0.2);
 }
 
 .input-box i{
@@ -97,7 +132,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
     font-size: 16px;
-    color: #333;
+    color: #000000;
     font-weight: 600;
     margin: 30px 0;
 }

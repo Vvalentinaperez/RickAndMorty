@@ -5,7 +5,7 @@
     height: auto;  /* Añadir para que tenga la altura de una fila */
     overflow: hidden;  /* Oculta cualquier cosa que exceda su altura */
     padding-inline: 2rem;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 

@@ -1,5 +1,5 @@
 import "./About.css"
-import yoo from '../imagenes/yoo.jpeg'
+import yoo from '../imagenes/yocaricatura.jpg'
 
 const About = () => {
     return(
@@ -9,10 +9,10 @@ const About = () => {
 
             <img src={yoo} width="180" alt="" className="box-img" />
             <div className="contenedorText">
-            <h1>Valentina Perez</h1>
-            <h2>Estudiante de Full Stack Developer</h2>
+              <h1>Valentina Perez</h1>
+              <h2>Estudiante de Full Stack Developer</h2>
             <div className="parraforContenedor" >
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi aliquam doloribus autem in fugit nemo qui iure. Dolore placeat aperiam quo, quasi ipsam qui doloremque repudiandae repellat. Est, atque minus.</p>
+            <p>Soy Valentina Perez, pero me dicen Valen Pe. Tengo 22 años, naci el 23 de julio del 2001. Siempre fui amante de la tecnologia, pero siempre me enfoque en estudiar diseño y marketing. Cuando entre a Henry, me empece a apasionar por todo este mundo, el cual es tan amplio y hermoso.</p>
             </div>
             
 

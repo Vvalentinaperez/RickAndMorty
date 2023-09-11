@@ -7,7 +7,7 @@ const Cards = ({characters, onClose}) => {
    return ( 
    <div className='card-container'>
       {
-         characters.map(({id, name, status, species, gender, origin, image}) => {
+         characters.slice(-4).map(({id, name, status, species, gender, origin, image}) => {
             return (
               <Card 
               key={id} //Es unicamente para react, para que sepa identificarlo

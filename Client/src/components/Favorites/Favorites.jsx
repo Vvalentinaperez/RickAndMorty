@@ -50,7 +50,7 @@ const Favorites = ({myFavorites}) => {
             
             <div className="card-container">
             {
-                characters?.map(fav => {
+                characters?.slice(-4).map(fav => {
                     return (
                         <Card 
                            key={fav.id}

@@ -15,6 +15,9 @@
     max-height: 70vh;
 }
 
+
+
+
 .card h1, .card h3, .botonX {
     margin-top: 3px;
     margin-bottom: 3px;
@@ -68,3 +71,30 @@ h1 {
     margin-bottom: 15px;
 }
 
+
+
+.card-container:hover .card {
+    transform: scale(1); /* al pasar el mouse por el contenedor, todas las tarjetas se "ampliarán" un poco */
+}
+
+
+.nameDetail {
+    font-family: 'Creepster', cursive;
+    text-align: center;
+    color: #12b0c9;
+    font-size: 1.7rem;
+    text-shadow:
+        -3px -3px 0 black,
+        3px -3px 0 black,
+        -3px 3px 0 black,
+        3px 3px 0 black;
+    text-decoration: none; /* Esto quita el subrayado del link */
+}
+
+.nameDetail:hover {
+    color: #12b0c9; /* Mantiene el color cuando se pasa el mouse por encima */
+}
+
+.fontExtra {
+    font-family: 'Work Sans', sans-serif;
+}

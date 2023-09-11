@@ -38,8 +38,8 @@ const Card = ({id, name, species, origin, image, gender,  onClose, removeFav, ad
           <h1 className="nameDetail">{name}</h1>
         </Link>
         
-         <h3>{species}</h3>
-         <h3>{origin}</h3>
+         <h3 className="fontExtra" >{species}</h3>
+         <h3 className="fontExtra" >{origin}</h3>
          <div className="cover__card">
            <img src={image} alt='' />
          </div>

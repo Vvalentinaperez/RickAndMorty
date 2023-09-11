@@ -14,6 +14,7 @@ import Favorites from './Favorites/Favorites';
 
 
 function App() {
+
    let [characters, setCharacters] = useState([])
    const location = useLocation()
 
@@ -33,6 +34,28 @@ function App() {
       });
    }
 
+
+   const randomHandler = () => {
+      let haveIt = []
+
+      let random = (Math.random() * 812).toFixed();
+
+      random = Number(random);
+
+      if(!haveIt.includes(random)){
+         haveIt.push(random);
+         axios(`http://localhost:3001/rickandmorty/character/${random}`).then(({ data }) => {
+         if (data.name) {
+            setCharacters((oldChars) => [...oldChars, data]);
+         } else {
+            window.alert('¡No hay personajes con este ID!');
+         }
+      });
+      }else{
+         console.log("Ya agregaste todos los personajes");
+         return false;
+      }
+   }
 
    const onSearch = async (id) => {
      await axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
@@ -56,7 +79,7 @@ function App() {
    return (
       <div className='App'>
          <div className='nav-spacer'>
-         {location.pathname !== "/" && <Nav onSearch={onSearch}/>} 
+         {location.pathname !== "/" && <Nav onSearch={onSearch}  random={randomHandler}/> } 
          </div>
          <Routes>
             <Route path='/home' element={<Cards characters={characters} onClose={onClose} />}/>

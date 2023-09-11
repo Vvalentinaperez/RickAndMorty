@@ -2,11 +2,13 @@ import {useState} from "react"
 import validation from "../Validation"
 import './Form.css'
 import logo from '../imagenes/logo2.png'
-import fondologin from "../imagenes/fondologin.png"
+
 
 
 
 const Form = ({login}) => {
+
+   
 
     const [userData, setUserData] = useState({
            email: "",
@@ -34,18 +36,18 @@ const Form = ({login}) => {
         login(userData);
     }
 
- 
+
 
     return(
     <div className="contenedorForm">
         <img src={logo} alt="Logo" className="logo" />
         <div className="contenedorFormulario">
         <form onSubmit={handleSubmit}>
-            <h1>Login</h1>
+              <h1 className="loginTitulo"  style={{ fontSize: '50px' }}>Login</h1>
             <div className="input-box">
               <label htmlFor="email" ></label>
               <input name="email" type="email" placeholder="Email" value={userData.email} onChange={handleChange} />
-              {errors.email && <p style={{color: "blue"}} >{errors.email}</p>} 
+              {errors.email && <p style={{color: "red"}} >{errors.email}</p>} 
               <i className="bx bxs-user"></i>
             </div>
             <div className="input-box">         

@@ -12,6 +12,7 @@ body {
     align-items: center;
 }
 
+
 .contenedorPrincipal {
     height: 100vh;
     display: flex;
@@ -46,6 +47,7 @@ body {
 }
 
 .contenedorText {
+    font-family: 'Work Sans', sans-serif;
    width: 70%;
    display: flex;
    flex-direction: column;
@@ -54,13 +56,15 @@ body {
 }
 
 .contenedorAbout h1 {
+    font-family: 'Work Sans', sans-serif;
     font-size: 28px;
     letter-spacing: 3px;
-    font-weight: 100;
+    font-weight: bold;
     margin: 15px 0 10px;
 }
 
 .contenedorAbout h2 {
+    font-family: 'Work Sans', sans-serif;
     font-size: 18px;
     letter-spacing: 2px;
     font-weight: 100;
@@ -68,6 +72,7 @@ body {
 }
 
 .contenedorAbout p {
+    font-family: 'Work Sans', sans-serif;
     font-size: 16px;
     text-align: center;
 }
