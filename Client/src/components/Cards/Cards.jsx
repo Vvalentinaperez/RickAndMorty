@@ -26,7 +26,7 @@ const Cards = ({characters, onClose}) => {
          })
       }
    </div>
-   <div className="creditos" >BIENVENIDOS, ESTE ES TU HOME!!! </div>
+   <div className="creditos" >BIENVENIDO, ESTE ES TU HOME!!! </div>
    </>
    );
 }

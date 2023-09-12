@@ -9,7 +9,7 @@ import "./Favorites.css"
 
 const Favorites = ({myFavorites}) => {
 
-    const [aux, setAux] = useState(false)
+    // const [aux, setAux] = useState(false)
 
     const dispatch = useDispatch()
 
@@ -21,7 +21,6 @@ const Favorites = ({myFavorites}) => {
 
     const handleOrder = (event) =>{
         dispatch(orderCards(event.target.value))
-        // setAux(true)
     }
 
     const handleFilter = (event) => {
@@ -59,7 +58,6 @@ const Favorites = ({myFavorites}) => {
                            name={fav.name}
                            species={fav.species}
                            image={fav.image}
-                           onClose={fav.onClose}
                         />
                     )
                 })
