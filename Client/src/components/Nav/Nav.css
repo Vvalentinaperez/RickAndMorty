@@ -48,3 +48,30 @@
     align-items: center;
     gap: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+    .navBar {
+        flex-wrap: wrap; /* Permite que los hijos de la barra de navegación se envuelvan si no hay espacio suficiente */
+        padding: 10px;
+    }
+
+    .nav-logo {
+        height: 30px; /* Ajustamos el tamaño del logo */
+    }
+
+    .navBar button {
+        padding: 6px 8px; /* Ajustamos el relleno del botón */
+        font-size: 0.8rem; /* Opcional: puedes ajustar el tamaño de fuente si es necesario */
+    }
+
+    .logo-search-container {
+        width: 100%; /* Ocupa todo el ancho en móviles */
+        justify-content: space-between; /* Distribuye espacio entre el logo y el buscador */
+        margin-bottom: 10px; /* Espaciado entre esta sección y los botones de filtro */
+    }
+}
+
+/* Para dispositivos medianos: tabletas */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Aquí podrías hacer ajustes específicos para tabletas si lo consideras necesario */
+}

@@ -70,9 +70,6 @@ body:has(.contenedorFormulario) {
     }
 }
 
-
-
-
 .contenedorFormulario{
    display: block;
    padding-top: 5rem;
@@ -87,7 +84,6 @@ body:has(.contenedorFormulario) {
    border-radius: 10px;
    padding: 30px 40px;
 }
-
 
 
 .contenedorFormulario .input-box{
@@ -136,3 +132,26 @@ body:has(.contenedorFormulario) {
     font-weight: 600;
     margin: 30px 0;
 }
+
+@media (max-width: 600px) {
+    .contenedorFormulario {
+        width: 100%; /* Ajustamos el ancho al 100% */
+        padding: 15px; /* Reducimos el padding */
+    }
+
+    .contenedorFormulario .input-box {
+        margin: 20px 0; /* Reducimos el margen */
+    }
+
+    .input-box input {
+        font-size: 16px; /* Disminuimos el tamaño de la fuente */
+        padding: 15px 35px 15px 15px; /* Ajustamos el padding */
+    }
+
+    .contenedorFormulario .btn {
+        height: 40px; /* Ajustamos el alto del botón */
+        font-size: 14px; /* Reducimos el tamaño de la fuente */
+        margin: 20px 0; /* Reducimos el margen */
+    }
+}
+

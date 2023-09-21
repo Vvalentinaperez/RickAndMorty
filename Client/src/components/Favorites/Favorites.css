@@ -45,3 +45,32 @@
     transform: translateX(-50%); /* Esto centrará el contenedor en el centro exacto */
     z-index: 2000; /* Asegúrate de que sea mayor que cualquier otro z-index que tengas para que siempre esté en la parte superior */
 }
+
+/* Para dispositivos muy pequeños: móviles */
+@media only screen and (max-width: 480px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding-inline: 1rem;
+    }
+
+    .filtersContainer {
+        left: 0;
+        width: 100%;
+        transform: none;
+        padding: 0 1rem;
+    }
+}
+
+/* Para dispositivos pequeños: móviles grandes */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para dispositivos medianos: tabletas */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
